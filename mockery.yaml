@@ -1,0 +1,7 @@
+with-expecter: True
+dir: ../mocks/{{ replaceAll .InterfaceDirRelative "internal" "internal_" }}
+all: True
+packages:
+  github.com/LouisBrunner/godot-go-plus:
+    config:
+      recursive: True
