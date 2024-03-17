@@ -1,5 +1,7 @@
 # godot-go-plus
 
+**WARNING: this project is still in early development and not currently functional.**
+
 This project allows you to easily wrap Go code into Godot classes and use them in your Godot project.
 
 The API is heavily inspired by https://github.com/ShadowApex/godot-go and uses https://github.com/godot-go/godot-go under the hood.
@@ -127,6 +129,7 @@ You will need to replace `your_folder` with the path to the folder containing th
 You can find examples in the `examples` folder.
 
 - `simple`: a simple example of a custom Godot class, which basically reproduces the above usage
+- `complete`: a more complete example showcasing custom getter/setter names, signals, GDScript usage, etc
 
 ## Acknowledgements
 
