@@ -24,7 +24,7 @@ func godot_go_plus_entry(p_get_proc_address unsafe.Pointer, p_library unsafe.Poi
 	for _, constructor := range globalRegisteredClasses {
 		wrapper, err := wrapper.Wrap(constructor)
 		if err != nil {
-			log.Error(fmt.Sprintf("Error wrapping class %q: %s", constructor.Name(), err))
+			log.Error(fmt.Sprintf("wrapping error: %s", err))
 			continue
 		}
 		registeredClasses = append(registeredClasses, wrapper)

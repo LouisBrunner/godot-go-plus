@@ -11,8 +11,11 @@ import (
 type MyNode2D struct {
 	Node2DImpl
 
-	Speed  int
-	secret string
+	Speed     int     `godot:"name=speed2"`
+	Direction Vector2 `godot:"get=MyDirection,set=nil"`
+	secret    string
+
+	SecretPrinted ggp.Signal
 }
 
 func (n *MyNode2D) SetSpeed(speed int) {
@@ -23,17 +26,22 @@ func (n *MyNode2D) GetSpeed() int {
 	return n.Speed
 }
 
+func (n *MyNode2D) MyDirection() Vector2 {
+	return n.Direction
+}
+
 func (n *MyNode2D) Move(vec Vector2) {
 	n.Node2DImpl.SetPosition(vec.Multiply_int(int64(n.Speed)))
+	n.printSecret()
 }
 
 func (n *MyNode2D) X_Ready() {
-	n.printSecret()
 	n.Speed *= 10
 }
 
 func (n *MyNode2D) printSecret() {
 	fmt.Println(n.secret)
+	n.SecretPrinted.Emit(true)
 }
 
 func newMyNode2D() ggp.Class {

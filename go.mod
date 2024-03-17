@@ -5,7 +5,7 @@ go 1.21.4
 toolchain go1.21.8
 
 // replace github.com/godot-go/godot-go => github.com/LouisBrunner/godot-go v0.3.17
-// replace github.com/godot-go/godot-go => ../godot-go
+replace github.com/godot-go/godot-go => ../godot-go
 
 require (
 	github.com/godot-go/godot-go v0.3.17

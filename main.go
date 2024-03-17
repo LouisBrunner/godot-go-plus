@@ -8,3 +8,4 @@ import (
 var Register = entry.Register
 
 type Class = wrapper.Class
+type Signal = wrapper.Signal

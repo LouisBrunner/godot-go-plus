@@ -1,0 +1,13 @@
+[configuration]
+entry_symbol = "godot_go_plus_entry"
+compatibility_minimum = "4.2"
+
+[libraries]
+macos.debug.arm64 = "res://libexample-darwin-arm64.dylib"
+macos.release.arm64 = "res://libexample-darwin-arm64.dylib"
+macos.debug.amd64 = "res://libexample-darwin-amd64.dylib"
+macos.release.amd64 = "res://libexample-darwin-amd64.dylib"
+windows.debug.amd64 = "res://libexample-windows-amd64.dll"
+windows.release.amd64 = "res://libexample-windows-amd64.dll"
+linux.debug.amd64 = "res://libexample-linux-amd64.so"
+linux.release.amd64 = "res://libexample-linux-amd64.so"

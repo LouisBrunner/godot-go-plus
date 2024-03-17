@@ -118,6 +118,10 @@ linux.release.amd64 = "res://your_folder/libmyextension-linux-amd64.so"
 
 You will need to replace `your_folder` with the path to the folder containing the shared library and `libmyextension` with the name of the shared library.
 
+### Caveats
+
+- Due to the way `godot-go` works, you will need to set the environment variable `GODEBUG=cgocheck=0` anytime you use the library as Go will panic otherwise.
+
 ### Examples
 
 You can find examples in the `examples` folder.
